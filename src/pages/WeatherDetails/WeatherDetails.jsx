@@ -11,7 +11,9 @@ const WeatherDetails = ({ data, city }) => {
         <h4 className="weather-details__subheader">Hourly</h4>
         <div className="weather-details__hourly-container">
           {data && data.hourly ? (
-            data.hourly.map((hour, index) => <Hourly key={index} hour={hour} />)
+            data.hourly
+              .slice(0, 12)
+              .map((hour, index) => <Hourly key={index} hour={hour} />)
           ) : (
             <p>Loading hourly data...</p>
           )}

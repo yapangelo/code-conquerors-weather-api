@@ -15,6 +15,7 @@
         white-space: nowrap;
         padding-bottom: .5rem;
         gap: .25rem;
+        padding: 1rem 0;
       
         &::-webkit-scrollbar {
           height: 8px;
@@ -31,6 +32,6 @@
     }
 
     &__subheader {
-      padding-top: 1.5rem;
+      padding-top: 2rem;
     }
 }
