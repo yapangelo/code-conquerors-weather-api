@@ -5,5 +5,13 @@
             padding: .5rem;
             display: flex;
             margin: auto;
+            position: relative;
+            top: 14rem;
+            outline: none;
+            border: 1px grey solid;
+
+            &:focus {
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            }
     }
 }

@@ -10,10 +10,15 @@ const WeatherDetails = ({ data, city }) => {
         <WeatherDetailsContainer data={data} />
         <h4 className="weather-details__subheader">Hourly</h4>
         <div className="weather-details__hourly-container">
-          <Hourly />
+          {data && data.hourly ? (
+            data.hourly.map((hour, index) => <Hourly key={index} hour={hour} />)
+          ) : (
+            <p>Loading hourly data...</p>
+          )}
         </div>
       </div>
     </>
   );
 };
+
 export default WeatherDetails;

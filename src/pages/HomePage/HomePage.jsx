@@ -1,5 +1,4 @@
 import "./HomePage.scss";
-import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import axios from "axios";
 import SearchBar from "../../components/SearchBar/SearchBar";
@@ -21,7 +20,7 @@ const HomePage = () => {
 
       //second
       const weatherResponse = await axios.get(
-        `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude=hourly,daily&appid=${apiKey}`
+        `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude=minutely,daily&appid=${apiKey}`
       );
       setWeatherData(weatherResponse.data);
     } catch (error) {

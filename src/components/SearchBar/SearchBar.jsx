@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./SearchBar.scss";
 
 const SearchBar = ({ onSearch }) => {
   const [inputValue, setInputValue] = useState("");
@@ -17,7 +18,6 @@ const SearchBar = ({ onSearch }) => {
         onChange={(e) => setInputValue(e.target.value)}
         className="location__input"
       />
-      {/* <button type="submit">Search</button> */}
     </form>
   );
 };

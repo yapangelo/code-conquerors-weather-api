@@ -1,12 +1,10 @@
 import "./WeatherDetailsContainer.scss";
-import TempC from "../../components/TempC/TempC";
 import sunny from "../../assets/images/sunny.webp";
 
 const WeatherDetailsContainer = ({ data }) => {
   return (
     <div className="weather-details-container">
       <img src={sunny} alt="icon" className="weather-details-container__icon" />
-      <TempC className={"tempc"} data={data} />
       <div>
         <h3 className="weather-details-container__weather">
           {data.current.weather[0].description}
