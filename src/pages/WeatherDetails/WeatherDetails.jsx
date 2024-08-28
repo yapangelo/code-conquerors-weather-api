@@ -1,40 +1,18 @@
 import "./WeatherDetails.scss";
-import { Link } from "react-router-dom";
 import WeatherDetailsContainer from "../../components/WeatherDetailsContainer/WeatherDetailsContainer";
 import Hourly from "../../components/Hourly/Hourly";
 
-const WeatherDetails = () => {
+const WeatherDetails = ({ data, city }) => {
   return (
     <>
-      <form action="" className="location">
-        <input type="text" className="location__input" placeholder="location" />
-      </form>
       <div className="weather-details">
-        <h4 className="weather-details__location">Vancouver, BC</h4>
+        <h4 className="weather-details__location">{city}</h4>
         <WeatherDetailsContainer />
-        <h4 className="weather-details__subheader">Hourly</h4>
+        <h4 className="weather-details__subheader">{data.current.temp}</h4>
         <div className="weather-details__hourly-container">
-          <Hourly />
-          <Hourly />
-          <Hourly />
-          <Hourly />
-          <Hourly />
-          <Hourly />
-          <Hourly />
-          <Hourly />
-          <Hourly />
-          <Hourly />
-          <Hourly />
-          <Hourly />
-          <Hourly />
-          <Hourly />
-          <Hourly />
           <Hourly />
         </div>
       </div>
-      <Link to="/" className="temporary">
-        <button>nav</button>
-      </Link>
     </>
   );
 };

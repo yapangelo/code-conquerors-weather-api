@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import axios from "axios";
 import SearchBar from "../../components/SearchBar/SearchBar";
+import WeatherDetails from "../WeatherDetails/WeatherDetails";
 
 const HomePage = () => {
   const [city, setCity] = useState(" ");
@@ -28,16 +29,17 @@ const HomePage = () => {
     }
   };
 
+  let weatherDetails;
+  if (weatherData) {
+    weatherDetails = <WeatherDetails data={weatherData} city={city} />;
+  } else {
+    weatherDetails = null;
+  }
+
   return (
     <>
-      <SearchBar />
-      <Link to="city">
-        <button>nav</button>
-      </Link>
-
-      {/* <div className="app">
-        <SearchBar onSearch={handleSearch} />
-      </div> */}
+      <SearchBar onSearch={handleSearch} />
+      {weatherDetails}
     </>
   );
 };

@@ -2,7 +2,7 @@ import "./WeatherDetailsContainer.scss";
 import TempC from "../../components/TempC/TempC";
 import sunny from "../../assets/images/sunny.webp";
 
-const WeatherDetailsContainer = () => {
+const WeatherDetailsContainer = ({ weatherData }) => {
   return (
     <div className="weather-details-container">
       <img src={sunny} alt="icon" className="weather-details-container__icon" />
