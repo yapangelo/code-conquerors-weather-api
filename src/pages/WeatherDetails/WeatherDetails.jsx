@@ -7,8 +7,8 @@ const WeatherDetails = ({ data, city }) => {
     <>
       <div className="weather-details">
         <h4 className="weather-details__location">{city}</h4>
-        <WeatherDetailsContainer />
-        <h4 className="weather-details__subheader">{data.current.temp}</h4>
+        <WeatherDetailsContainer data={data} />
+        <h4 className="weather-details__subheader">Hourly</h4>
         <div className="weather-details__hourly-container">
           <Hourly />
         </div>
